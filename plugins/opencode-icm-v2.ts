@@ -138,7 +138,7 @@ export default Plugin.define({
         if (!parts) {
           parts = [
             icmCapture(["wake-up", "--project", project], directory),
-            icmCapture(["recall-project", "--project", project, "--limit", "5"], directory),
+            icmCapture(["recall-project", "--limit", "5"], directory),
           ].filter((text) => text.length > 0)
           sessionContext.set(sessionID, parts)
         }
